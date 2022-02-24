@@ -1,16 +1,14 @@
-# checkino
+# Checkino Windows
 
 a project for check connect vpn in a desktop
 
-## Getting Started
+## Download EXE(V1)
 
-This project is a starting point for a Flutter application.
+you can download from installerFile in source or :
 
-A few resources to get you started if this is your first Flutter project:
+- [GDrive](https://drive.google.com/file/d/1PHTMJM2BCw3uqEpxCut-uT_B2nRZk2hy/view?usp=sharing)
+- [PicoFile](https://s23.picofile.com/file/8447750018/CheckinoSetupFile.exe.html)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+description & screenshot available soon...
+
