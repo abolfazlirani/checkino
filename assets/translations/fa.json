@@ -1,0 +1,21 @@
+{
+
+  "splash_title": "چکینو",
+  "home_center_on": "روشن",
+  "home_center_off": "خاموش",
+  "home_toconnected": "محافظت شده از  :",
+  "home_notconnected": "غیر فعال",
+  "home_connected": "فعال",
+  "home_tap": "یک ضربه تا اتصال",
+  "home_protect_start": "شروع محافظت",
+  "home_protect_stop": "اتمام محافظت",
+  "settting_ip": "آیپی ",
+  "settting_title": "تنظیمات",
+  "settting_thene": "ظاهر",
+  "duration_second": "ثانیه",
+  "duration_min": "دقیقه",
+  "duration_title": "مدت زمان بررسی",
+  "settting_save": "ذخیره",
+  "notif_des": "پروکسی شما قطع میباشد",
+  "notif_des2": "لطفا اتصال خود را بررسی کنید"
+}

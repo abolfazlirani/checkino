@@ -1,0 +1,22 @@
+{
+
+  "splash_title": "Checkino",
+  "home_center_on": "On",
+  "home_center_off": "Off",
+  "home_toconnected": "Protected To :",
+  "home_notconnected": "Not Connected",
+  "home_connected": "Connected",
+  "home_tap": "Tap to connect",
+  "home_protect_start": "Start Protect",
+  "home_protect_stop": "Stop Protect",
+  "settting_ip": "IP Config ",
+  "settting_title": "Setting",
+  "settting_thene": "Theme",
+  "duration_second": "Second",
+  "duration_min": "Minute",
+  "duration_title": "Check Duration",
+  "settting_save": "Save",
+  "notif_des": "Yor are Not Connected!",
+  "notif_des2": "Please check your connection",
+  "about_close": "Close"
+}
