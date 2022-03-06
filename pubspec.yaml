@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.1.0+2
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -50,10 +50,15 @@ dependencies:
 
 dev_dependencies:
   flutter_test: {sdk: flutter}
-  msix: ^2.1.1
+  msix: ^2.4.0
   flutter_launcher_icons: "^0.9.2"
 
 
+msix_config:
+  display_name: Checkino
+  publisher_display_name: Abolfazl irani
+  msix_version: 1.0.0.0
+  logo_path: C:\Users\Abo\AndroidStudioProjects\checkino\assets\image\splashlogo.png
 
 flutter_icons:
   android: "launcher_icon"

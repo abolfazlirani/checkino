@@ -109,22 +109,24 @@ class _HomeSettingDialogState extends State<HomeSettingDialog> {
                                 .asMap()
                                 .entries
                                 .map((e) {
-                              return InkWell(
-                                onTap: () {
+                              return Expanded(
+                                child: InkWell(
+                                  onTap: () {
 
-                                  _selecetedColor = e.value;
-                                  setState(() {
+                                    _selecetedColor = e.value;
+                                    setState(() {
 
-                                  });
-                                },
-                                child: Container(
-                                  width: 30,
-                                  margin: EdgeInsets.symmetric(horizontal: 3),
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                      color: e.value,
-                                      borderRadius: BorderRadius.circular(4),
-                                    border: Border.all(color: Colors.white,width: _selecetedColor.value==e.value.value?3:0)
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 30,
+                                    margin: EdgeInsets.symmetric(horizontal: 3),
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        color: e.value,
+                                        borderRadius: BorderRadius.circular(4),
+                                      border: Border.all(color: Colors.white,width: _selecetedColor.value==e.value.value?3:0)
+                                    ),
                                   ),
                                 ),
                               );

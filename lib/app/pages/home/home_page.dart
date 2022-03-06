@@ -177,94 +177,110 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                   flex: 1,
                                   child: Container(
-                                    margin: EdgeInsets.symmetric(vertical: 20),
+
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment
                                           .spaceBetween,
                                       children: [
+                                        SizedBox(
+                                          height: 20,
+                                        ),
                                         GetBuilder<HomeLogic>(builder: (logic) {
-                                          return AnimatedContainer(
-                                            duration: Duration(
-                                                milliseconds: 500),
-                                            width: 250,
-                                            height: 50,
-                                            decoration: BoxDecoration(
-                                                color: logic.protect.value
-                                                    ? tmeloj.theme
-                                                    .disabledColor
-                                                    : Colors
-                                                    .transparent,
-                                                border: Border.all(
-                                                    color: tmeloj.theme
-                                                        .disabledColor),
-                                                borderRadius: BorderRadius
-                                                    .circular(5)
-                                            ),
-                                            child: MaterialButton(
-                                              hoverColor: !logic
-                                                  .protect
-                                                  .value
-                                                  ? tmeloj.theme.disabledColor
-                                                  .withOpacity(
-                                                  0.5) : Colors.white
-                                                  .withOpacity(
-                                                  0.1),
-                                              onPressed: () {
-                                                logic.pressButton();
-                                               ;
-                                              },
-                                              child: Center(
-                                                child: Text(
-                                                  !logic
-                                                      .protect
-                                                      .value
-                                                      ? "home_protect_start"
-                                                      : "home_protect_stop",
-                                                  style: TextStyle(
-                                                      fontWeight: FontWeight
-                                                          .w400,
-                                                      fontSize: 15),
-                                                ).tr(),
-                                              ),
+                                          return Expanded(
+                                            flex: 2,
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 500),
+                                                  width: 250,
+                                                  height: 50,
+                                                  decoration: BoxDecoration(
+                                                      color: logic.protect.value
+                                                          ? tmeloj.theme
+                                                          .disabledColor
+                                                          : Colors
+                                                          .transparent,
+                                                      border: Border.all(
+                                                          color: tmeloj.theme
+                                                              .disabledColor),
+                                                      borderRadius: BorderRadius
+                                                          .circular(5)
+                                                  ),
+                                                  child: MaterialButton(
+                                                    hoverColor: !logic
+                                                        .protect
+                                                        .value
+                                                        ? tmeloj.theme.disabledColor
+                                                        .withOpacity(
+                                                        0.5) : Colors.white
+                                                        .withOpacity(
+                                                        0.1),
+                                                    onPressed: () {
+                                                      logic.pressButton();
+                                                     ;
+                                                    },
+                                                    child: Center(
+                                                      child: Text(
+                                                        !logic
+                                                            .protect
+                                                            .value
+                                                            ? "home_protect_start"
+                                                            : "home_protect_stop",
+                                                        style: TextStyle(
+                                                            fontWeight: FontWeight
+                                                                .w400,
+                                                            fontSize: 15),
+                                                      ).tr(),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           );
                                         }),
 
-                                        Container(
-                                            width: 250,
-                                            child: Row(
-                                              mainAxisAlignment: MainAxisAlignment
-                                                  .spaceEvenly,
-                                              children: [
-                                                CustomPopupMenu(
-                                                  child: Container(
-                                                    padding: EdgeInsets.all(10),
+                                        Expanded(
+                                          flex: 1,
+                                          child: Container(
+                                              width: 250,
+                                              padding: EdgeInsets.only(bottom: 5),
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment
+                                                    .spaceEvenly,
+                                                children: [
+                                                  CustomPopupMenu(
+                                                    child: Container(
+                                                      padding: EdgeInsets.all(10),
 
-                                                    child: Icon(Icons.language,
-                                                      color: tmeloj.theme
-                                                          .disabledColor,),
+                                                      child: Icon(Icons.language,
+                                                        color: tmeloj.theme
+                                                            .disabledColor,),
+                                                    ),
+                                                    menuBuilder: _buildLongPressMenu,
+                                                    barrierColor: Colors
+                                                        .transparent,
+                                                    pressType: PressType
+                                                        .singleClick,
                                                   ),
-                                                  menuBuilder: _buildLongPressMenu,
-                                                  barrierColor: Colors
-                                                      .transparent,
-                                                  pressType: PressType
-                                                      .singleClick,
-                                                ),
-                                                IconButton(onPressed: () {
-                                                  showCustomDialog(context);
-                                                },
-                                                  icon: Icon(Icons.settings),
-                                                  color: tmeloj.theme
-                                                      .disabledColor,),
-                                                IconButton(onPressed: () {
-                                                  showCustomDialog3(context);
-                                                },
-                                                  icon: Icon(
-                                                      Icons.info_outline),
-                                                  color: tmeloj.theme
-                                                      .disabledColor,),
-                                              ],
-                                            ))
+                                                  IconButton(onPressed: () {
+                                                    showCustomDialog(context);
+                                                  },
+                                                    icon: Icon(Icons.settings),
+                                                    color: tmeloj.theme
+                                                        .disabledColor,),
+                                                  IconButton(onPressed: () {
+                                                    showCustomDialog3(context);
+                                                  },
+                                                    icon: Icon(
+                                                        Icons.info_outline),
+                                                    color: tmeloj.theme
+                                                        .disabledColor,),
+                                                ],
+                                              )),
+                                        ),
+
                                       ],
                                     ),
                                   )),
@@ -419,7 +435,7 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Center(
                           child: Text(
-                            "about_close",
+                            "Close",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 15),

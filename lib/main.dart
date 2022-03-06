@@ -28,9 +28,9 @@ windowManager.waitUntilReadyToShow().then((_) async{
   await windowManager.setAlwaysOnTop(true);
   await windowManager.setMovable(true);
   await windowManager.setSize(initialSize);
-  await windowManager.setMaximumSize(initialSize);
+  await windowManager.setMaximumSize(Size(700, 700));
   await windowManager.setMinimumSize(initialSize);
-  await windowManager.setResizable(false);
+  await windowManager.setResizable(true);
   await windowManager.setAlignment(Alignment.bottomRight);
   await windowManager.show();
 

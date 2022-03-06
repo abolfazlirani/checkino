@@ -60,20 +60,20 @@ class HomeLogic extends GetxController {
     var mes = await WinToast.instance().initialize(
         appName: 'Checkino',
         productName: 'Checkino',
-
-
-        companyName: 'abo');
+        companyName: 'Abolfazl irani');
     String subtitle = tr("notif_des");
     String subtitle2 = tr("notif_des2");
     toast = await  WinToast.instance().showToast(
         type: ToastType.text02, title:subtitle ,subtitle:subtitle2
-     ,actions: [tr("home_protect_stop")]
+     ,actions: [tr("home_protect_start_again")]
   );
 
   toast!.eventStream.forEach((element) {
 
     if(element.toString().contains("ActivatedEvent{actionIndex: 0}")) {
-        pressButton();
+      _startProtect();
+      protect(true);
+      update();
     }
   });
   }
@@ -111,6 +111,8 @@ class HomeLogic extends GetxController {
   void _checkVpnConnection() async{
     isConnected =(await CheckVpnConnection.isVpnActive(mainApi.value)).obs;
     if(!isConnected.value){
+      _stopProtect();
+      protect(false);
       createToast();
     }
     update();
